@@ -10,7 +10,7 @@ RUN pip install git+https://git.openstack.org/openstack-infra/jenkins-job-builde
 
 RUN mkdir -m 0755 /etc/jenkins_jobs
 RUN useradd jenkins_jobs
-RUN chmod -R jenkins_jobs:jenkins_jobs /etc/jenkins_jobs
+RUN chown -R jenkins_jobs:jenkins_jobs /etc/jenkins_jobs
 USER jenkins_jobs
 WORKDIR /home/jenkins_jobs
 
