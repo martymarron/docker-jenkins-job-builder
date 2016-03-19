@@ -8,6 +8,8 @@ RUN pip install --upgrade pip
 RUN pip install argparse ordereddict PyYAML python-jenkins
 RUN pip install git+https://git.openstack.org/openstack-infra/jenkins-job-builder
 
+RUN mkdir -m /etc/jenkins_jobs/
+
 ENTRYPOINT ["jenkins-jobs"]
 
 CMD ["--help"]
